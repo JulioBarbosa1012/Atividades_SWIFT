@@ -1,0 +1,78 @@
+import Foundation
+
+print("Júlio Barbosa - 11900296")
+//1
+var numero1 = 7
+var numero2 = 5
+var total = 1
+func questao1(_ number: Int){
+  var number = number
+
+  while number > 1 {
+    if number % numero1 == 0 {
+      number = number / numero1
+      numero2 = numero2 + 1 
+    } else {
+      numero1 = numero1 + 1
+    }
+  }
+  while numero2 > 0 {
+      total = total * 2
+      numero2 = numero2 - 1
+  }
+  print(total)
+}
+questao1(2467)
+
+//2
+var (a,b) = (0, -5)
+
+if a>b {
+    print("Este numero é negativo")
+  }  else {
+    print("Este numero é positivo")
+}
+
+//3 
+func nota(media: Double) -> String{
+      var nota = ""
+      if media >= 0 && media < 5{
+          nota = "D"
+      }else if media >= 5 && media < 7{
+          nota = "C"
+      }else if media >= 7 && media < 9{
+          nota = "B"
+      }else if media >= 9 && media <= 10{
+           nota = "A"
+      }
+   return nota
+}
+print (nota(media: 4))
+
+//4
+let listnum = [2,3,26,37,38,48,60,62,75,78]
+
+let soma = listnum.reduce(0, +)
+
+print("A soma dos numeros da array é: ", soma)
+
+//5
+let tabuada: Array<Int> = [9,18,27,36,45,54,63,72,81]
+func multicar(_ quant: Int){
+  var lista: Array<Int> = []
+  for item in tabuada {
+    lista.append(item * quant)
+  }
+    print(lista)
+}
+tabuada(7)
+
+//6
+func questao6(_ valor: Int){
+    var valor = valor
+    while valor / 2 > 1 {
+    valor = valor / 2
+    print(valor)
+    }   
+}
+questao6(6)
